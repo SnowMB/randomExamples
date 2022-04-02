@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 21,
+      "patch": 0
+  },
+  "configurePresets": [
+      {
+          "name": "debug",
+          "inherits": "windows-msvc-debug-developer-mode",
+          "description": "debug",
+          "cmakeExecutable": "$env{VCPKG_ROOT}/downloads/tools/cmake-3.22.2-windows/cmake-3.22.2-windows-i386/bin/cmake.exe"
+      }
+  ],
+  "testPresets": [
+      {
+          "name": "debug",
+          "displayName": "debug",
+          "description": "Enable output and stop on failure",
+          "inherits": "test-windows-msvc-debug-developer-mode",
+          "configurePreset": "debug"
+      }
+  ]
+}
